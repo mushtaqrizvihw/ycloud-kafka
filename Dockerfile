@@ -9,7 +9,7 @@ RUN yum install wget -y \
 ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
 
 # Install HDP 2.5.0.0 repo. TODO: Parametrize version
-RUN wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.5.0.0/hdp.repo \
+RUN wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.5.0.0-1245/hdp.repo \
     && mv hdp.repo /etc/yum.repos.d/ \
     && yum updateinfo; yum clean all
 
